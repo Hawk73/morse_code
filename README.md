@@ -25,6 +25,8 @@
 ?-? должен вернуть ['R','W','G','O']
 ```
 
+TODO: Add version with recursion.
+
 ## Development
 
         $ bundle install
