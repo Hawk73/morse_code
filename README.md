@@ -29,8 +29,12 @@
 
         $ bundle install
         $ bundle exec irb
-        $ require_relative 'lib/decode_morse_code'
-        $ DecodeMorseCode.new.call('?')
+        # # Version with regexp
+        $ require_relative 'lib/decode_morse_code_by_regexp'
+        $ DecodeMorseCodeByRegexp.new.call('?')
+        # # Version with logical compare
+        $ require_relative 'lib/decode_morse_code_by_binary'
+        $ DecodeMorseCodeByBinary.new.call('?')
 
 ## Test
 

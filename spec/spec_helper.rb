@@ -95,4 +95,18 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
+
+  MORSE_CODES_WITH_RESULTS =
+    {
+      # From task
+      '?' => %w[E T],
+      '?.' => %w[I N],
+      '.?' => %w[I A],
+      '?-?' => %w[R W G O],
+      # Additional
+      '??' => %w[I A N M], # two questions
+      '???' => %w[S U R W D K G O], # three questions
+      '...' => %w[S], # all dots
+      '---' => %w[O] # all dashes
+    }
 end

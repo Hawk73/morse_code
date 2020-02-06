@@ -1,4 +1,4 @@
-class DecodeMorseCode
+class DecodeMorseCodeByRegexp
   LETTER_WITH_MORSE_CODES = {
     'A' => '.-',
     'D' => '-..',
@@ -16,8 +16,8 @@ class DecodeMorseCode
     'W' => '.--'
   }
 
-  def call(morse_code)
-    regexp = regexp_for(morse_code)
+  def call(input_morse_code)
+    regexp = regexp_for(input_morse_code)
     LETTER_WITH_MORSE_CODES.map do |letter, morse_code|
       morse_code.match(regexp) ? letter : nil
     end.compact
