@@ -29,6 +29,8 @@
 
         $ bundle install
         $ bundle exec irb
+        $ require_relative 'lib/decode_morse_code'
+        $ DecodeMorseCode.new.call('?')
 
 ## Test
 
