@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DecodeMorseCodeByRegexp
   LETTER_WITH_MORSE_CODES = {
     'A' => '.-',
@@ -14,7 +16,7 @@ class DecodeMorseCodeByRegexp
     'T' => '-',
     'U' => '..-',
     'W' => '.--'
-  }
+  }.freeze
 
   def call(input_morse_code)
     regexp = regexp_for(input_morse_code)

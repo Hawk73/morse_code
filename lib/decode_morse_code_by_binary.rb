@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'decode_morse_code_by_regexp'
 
 class DecodeMorseCodeByBinary
@@ -5,6 +7,7 @@ class DecodeMorseCodeByBinary
     input_binary_code = morse_code_to_binary_code(input_morse_code)
     letter_with_binary_codes.map do |letter, binary_code|
       next unless with_the_same_level?(input_binary_code, binary_code)
+
       (input_binary_code & binary_code) == binary_code ? letter : nil
     end.compact
   end
@@ -33,7 +36,7 @@ class DecodeMorseCodeByBinary
   # example: 0b0101, 0b0110, 0b0111, 0b1101, 0b1110, 0b1111 => 2
   def level_for(binary_code)
     binary_code_length = binary_code.to_s(2).length
-    binary_code_length = binary_code_length + 1 unless binary_code_length.even?
+    binary_code_length += 1 unless binary_code_length.even?
     binary_code_length / 2
   end
 end

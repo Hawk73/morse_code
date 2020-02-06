@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'decode_morse_code_by_binary'
 
 RSpec.describe DecodeMorseCodeByBinary do
